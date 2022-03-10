@@ -7,7 +7,15 @@ import java.util.Scanner;
 public class Lesson {
     public static void main(String[] args) {
 
-        System.out.printf("%.2f", 301920.129124129);
+        double X,Y,Z;
+        X = 244231.5555555;
+        Y = 234212389.22222;
+        Z = X+Y;
+        System.out.printf("%.3f", X+Y);
+        System.out.println();
+        System.out.printf("%.3f", Z);
+        System.out.println();
+        System.out.println(Z);
 
 /*        for (String arg : args) {
             System.out.println(arg);

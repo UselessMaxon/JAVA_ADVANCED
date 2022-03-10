@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 /**
  * Simple calculator for four types operation: "+" , "-" , "*" , "/"
  * with console output
@@ -5,18 +7,16 @@
  * @return void
  */
 
-import java.util.Scanner;
-
 public class Calc_1 {
     public static void main(String[] args) {
 
         Scanner in = new Scanner(System.in);
-        float X,Y;
+        Double X,Y;
         String operation;
         System.out.println("Введите число №1");
-        X = in.nextFloat();
+        X = in.nextDouble();
         System.out.println("Введите число №2");
-        Y = in.nextFloat();
+        Y = in.nextDouble();
         in.nextLine(); // Очистка сканера
 
         System.out.println("Введите одну из операций: ‘+’, ‘-’, ‘*’ или ‘/’.");
