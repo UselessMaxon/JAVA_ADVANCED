@@ -6,9 +6,9 @@ public class Mass {
         Scanner in = new Scanner(System.in);
 
 //        System.out.println("Выберите задачу: 1 - Калькулятор, 2 - Массив");
-//        byte numberTask = in.nextByte();
+//        int numberTask = in.nextByte();
 
-        byte numberTask = 2;
+        int numberTask = 2;
 
         System.out.println("Введите размер массива");
         int size = in.nextInt();
@@ -37,4 +37,6 @@ public class Mass {
 
         System.out.println(array[numberMaxPosition]);
     }
+
 }
+
