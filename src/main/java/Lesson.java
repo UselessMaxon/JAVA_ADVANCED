@@ -7,8 +7,9 @@ public class Lesson {
     public static void main(String[] args) {
 
 
-
-
+        int i = 3;
+        int z = i++;
+        System.out.println(z);
 
 /*        double X,Y,Z;
         X = 244231.5555555;
