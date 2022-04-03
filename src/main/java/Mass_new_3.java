@@ -5,59 +5,66 @@ public class Mass_new_3 {
 
         int[] mass = new int[20];
 
-        int min = mass[0];
-        int numMin = 0;
-        int max = mass[0];
-        int numMax = 0;
+        int range = 21;
+        int minPositive = 999;
+        int numMinPositive = 0;
+        int maxNegative = -999;
+        int numMaxNegative = 0;
         int counter = 0;
 
+
         while (counter < mass.length) {
-            int rnd = (int) (Math.random() * 21) - 10;
+            int rnd = (int) (Math.random() * range) - (range/2 - 1);
             mass[counter] = rnd;
 
-            if (mass[counter] > max) {
-                max = mass[counter];
-                numMax = counter;
+            if (mass[counter] < 0 && mass[counter] >= maxNegative) {
+                maxNegative = mass[counter];
+                numMaxNegative = counter;
             }
 
-            else if (mass[counter] < min) {
-                min = mass[counter];
-                numMin = counter;
+            else if (mass[counter] > 0 && mass[counter] <= minPositive) {
+                minPositive = mass[counter];
+                numMinPositive = counter;
             }
 
             counter++;
         }
 
         System.out.println(Arrays.toString(mass));
-        System.out.println("Максимальный элемент массива: " + max + " Индекс №: " + numMax);
-        System.out.println("Минимальный элемент массива: " + min + " Индекс №: " + numMin);
 
-        int temp = mass[numMin];
-        mass[numMin] = mass[numMax];
-        mass[numMax] = temp;
-
-
-        System.out.println("---------- \nМассив, после перестановки элементов: \n" + Arrays.toString(mass));
-
-        counter = 0;
-        min = 0;
-        max = 0;
-        while (counter < mass.length) {
-            if (mass[counter] > max) {
-                max = mass[counter];
-                numMax = counter;
-            }
-
-            else if (mass[counter] < min) {
-                min = mass[counter];
-                numMin = counter;
-            }
-
-            counter++;
+        if (minPositive == 999 || maxNegative == -999) {
+            System.err.println("Сгенерированный массив не имеет положительного или отрицательного числа");
         }
 
-        System.out.println("Максимальный элемент массива после перестановки: " + max + " Индекс №: " + numMax);
-        System.out.println("Минимальный элемент массива после перестановки: " + min + " Индекс №: " + numMin);
+        else {
+            System.out.println("Максимальный ОТРИЦАТЕЛЬНЫЙ элемент массива: " + maxNegative + ", Индекс № " + numMaxNegative);
+            System.out.println("Минимальный ПОЛОЖИТЕЛЬНЫЙ элемент массива: " + minPositive + ", Индекс № " + numMinPositive);
+
+            int temp = mass[numMinPositive];
+            mass[numMinPositive] = mass[numMaxNegative];
+            mass[numMaxNegative] = temp;
+
+            System.out.println("---------- \nМассив, после перестановки элементов: \n" + Arrays.toString(mass));
+
+            counter = 0;
+            while (counter < mass.length) {
+
+                if (mass[counter] < 0 && mass[counter] >= maxNegative) {
+                    maxNegative = mass[counter];
+                    numMaxNegative = counter;
+                }
+
+                else if (mass[counter] > 0 && mass[counter] <= minPositive) {
+                    minPositive = mass[counter];
+                    numMinPositive = counter;
+                }
+
+                counter++;
+            }
+
+            System.out.println("Максимальный ОТРИЦАТЕЛЬНЫЙ после перестановки: " + maxNegative + ", Индекс № " + numMaxNegative);
+            System.out.println("Минимальный ПОЛОЖИТЕЛЬНЫЙ после перестановки: " + minPositive + ", Индекс № " + numMinPositive);
+        }
     }
 }
 
