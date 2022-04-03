@@ -32,8 +32,14 @@ public class Mass_new_3 {
 
         System.out.println(Arrays.toString(mass));
 
-        if (minPositive == 999 || maxNegative == -999) {
-            System.err.println("Сгенерированный массив не имеет положительного или отрицательного числа");
+        if (minPositive == 999) {
+            System.err.println("Сгенерированный массив не имеет положительного числа");
+            System.out.println("Максимальный ОТРИЦАТЕЛЬНЫЙ элемент массива: " + maxNegative + ", Индекс № " + numMaxNegative);
+        }
+
+        else if (maxNegative == -999) {
+            System.err.println("Сгенерированный массив не имеет отрицательного числа");
+            System.out.println("Минимальный ПОЛОЖИТЕЛЬНЫЙ элемент массива: " + minPositive + ", Индекс № " + numMinPositive);
         }
 
         else {
