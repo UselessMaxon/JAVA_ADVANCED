@@ -1,7 +1,5 @@
 package Calc_OOP.operations;
 
-import Calc_OOP.operations.Operation;
-
 public class SubOperation extends Operation {
 
     public SubOperation(double firstNumber, double secondNumber) {

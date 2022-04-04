@@ -1,25 +1,27 @@
 package Calc_OOP;
-import Calc_OOP.WhatOperation;
 
+import java.util.Scanner;
 
 public class Calc_OOP_MAIN_4 {
-
-
-
-
     public static void main(String[] args) {
 
-    char plus = '+';
-    double fi = 4;
-    double se = 46;
-    double dd;
+        Scanner in = new Scanner(System.in);
+        double X,Y;
+        char operation;
+        System.out.println("Введите число №1");
+        X = in.nextDouble();
+        System.out.println("Введите число №2");
+        Y = in.nextDouble();
+        in.nextLine(); // Очистка сканера
 
-    WhatOperation www = new WhatOperation();
-    dd= www.whatOperation(plus, fi, se);
+        System.out.println("Введите одну из операций: ‘+’, ‘-’, ‘*’ или ‘/’.");
+        operation = (in.nextLine()).charAt(0);
 
+        WhatOperation www = new WhatOperation();
+        double answer= www.whatOperation(operation, X, Y);
 
-        System.out.println(dd);
+        System.out.printf("%.4f", answer);
 
-
+        in.close();
     }
 }
