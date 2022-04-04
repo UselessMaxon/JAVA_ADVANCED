@@ -17,8 +17,8 @@ public class Calc_OOP_MAIN_4 {
         System.out.println("Введите одну из операций: ‘+’, ‘-’, ‘*’ или ‘/’.");
         operation = (in.nextLine()).charAt(0);
 
-        WhatOperation www = new WhatOperation();
-        double answer= www.whatOperation(operation, X, Y);
+        WhatOperation ready = new WhatOperation();
+        double answer= ready.whatOperation(operation, X, Y);
 
         System.out.printf("%.4f", answer);
 
