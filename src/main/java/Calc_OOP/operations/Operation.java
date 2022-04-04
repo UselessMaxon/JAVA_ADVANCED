@@ -33,8 +33,6 @@ public abstract class Operation {
         return answer;
     }
 
-
-
 }
 
 
