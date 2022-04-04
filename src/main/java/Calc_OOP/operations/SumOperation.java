@@ -1,4 +1,6 @@
-package Calc_OOP;
+package Calc_OOP.operations;
+
+import Calc_OOP.operations.Operation;
 
 public class SumOperation extends Operation {
 

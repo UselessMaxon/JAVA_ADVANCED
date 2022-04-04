@@ -1,4 +1,4 @@
-package Calc_OOP;
+package Calc_OOP.operations;
 
 public abstract class Operation {
 
