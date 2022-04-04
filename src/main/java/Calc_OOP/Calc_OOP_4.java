@@ -7,10 +7,23 @@ public class Calc_OOP_4 {
     double fi = 4;
     double se = 46;
 
-    SumOperation op = new SumOperation(plus,fi,se);
+        switch (plus) {
+            case '+':
+                SumOperation op = new SumOperation(fi,se);
+                double ss = op.goAnswer(op.getFirstNumber(), op.getSecondNumber());
+                System.out.println(ss);
+                break;
+            case '-': int ff =33;
+                break;
+            case '*': int fz = 45;
+                break;
+            default:
+                break;
+        }
 
-    double ss = op.goAnswer(op.getFirstNumber(), op.getSecondNumber());
-        System.out.println(ss);
+
+
+
 
     }
 }

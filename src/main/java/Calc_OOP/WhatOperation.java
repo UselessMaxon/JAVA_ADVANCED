@@ -1,14 +1,17 @@
-package Calc_OOP;
-
+/*package Calc_OOP;
+        .
 public class WhatOperation {
+
     public char whatOperatation(char plus) {
         switch (plus) {
-            case "+": return ;
+            case "+": ;
                 break;
             case "-": ;
                 break;
             case "*": ;
                 break;
+            default:
+                break;
     }
 
-}
+}*/

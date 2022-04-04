@@ -2,8 +2,8 @@ package Calc_OOP;
 
 public class SumOperation extends Operation {
 
-    public SumOperation(char charOperation, double firstNumber, double secondNumber) {
-        super(charOperation, firstNumber, secondNumber);
+    public SumOperation(double firstNumber, double secondNumber) {
+        super(firstNumber, secondNumber);
     }
 
     @Override
