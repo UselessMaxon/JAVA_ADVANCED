@@ -20,6 +20,7 @@ public class Calc_OOP_MAIN_4 {
         WhatOperation ready = new WhatOperation();
         double answer= ready.whatOperation(operation, X, Y);
 
+        System.out.print("Ответ: ");
         System.out.printf("%.4f", answer);
 
         in.close();
