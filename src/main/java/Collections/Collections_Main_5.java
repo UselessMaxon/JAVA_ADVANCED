@@ -1,19 +1,17 @@
 package Collections;
 
+import javax.lang.model.element.NestingKind;
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Scanner;
+import java.util.*;
 
 public class Collections_Main_5 {
 
 
-    public static void  readFile() {
+    public static void readFile(File file1) {
 
-        Collection<String> allWord = new ArrayList<String>();
+        ArrayList<String> allWord = new ArrayList<String>();
 
-        File file1 = new File("src/main/java/Collections/notes.txt");
         try {
             Scanner reader = new Scanner(file1);
 
@@ -26,14 +24,26 @@ public class Collections_Main_5 {
         }
 
         System.out.println(allWord);
-        //return allWord;
+        Collections.sort(allWord);
+        System.out.println(allWord);
+
+        //создание сортед сет
+        HashSet<String> allWordSet = new HashSet<String>(allWord);
+        System.out.println(allWordSet);
+
+      //  return allWord;
+
+
+
     }
 
-    /*   public Collection sortAlphabet(){
+//    public static void sortAlphabet(ArrayList<String> allWord) {
 
-       }
+ //       Collections.sort(allWord);
+//        System.out.println();
+ //   }
 
-       public Collection counterUniq() {
+    /*   public Collection counterUniq() {
 
        }
 
@@ -49,9 +59,17 @@ public class Collections_Main_5 {
    */
     public static void main(String[] args) {
 
-        System.out.println("Файл должен находиться: src/main/java/Collections/notes.txt \n----------------");
-        System.out.println();
-        readFile();
+        String path = "src/main/java/Collections/notes.txt";
+        System.out.println("Файл должен находиться: " + path +
+                "\n-----------------------------------------------------------");
+
+        File file1 = new File(path);
+        readFile(file1);
+
+
+
+
+
 
 
 
