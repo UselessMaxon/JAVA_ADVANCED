@@ -1,8 +1,5 @@
 package Calc_OOP;
-import Calc_OOP.operations.MultiOpertaion;
-import Calc_OOP.operations.SubOperation;
-import Calc_OOP.operations.SumOperation;
-import Calc_OOP.operations.DivOperation;
+import Calc_OOP.operationsNew.OperationsNew;
 
 public class WhatOperation {
 
@@ -11,21 +8,21 @@ public class WhatOperation {
 
         switch (operation) {
             case '+':
-                SumOperation sum = new SumOperation(X,Y);
-                answer = sum.goAnswer(sum.getFirstNumber(), sum.getSecondNumber());
+                OperationsNew sum = new OperationsNew(X,Y);
+                answer = sum.goAnswerSum(sum.getFirstNumber(), sum.getSecondNumber());
                 break;
             case '-':
-                SubOperation sub = new SubOperation(X,Y);
-                answer = sub.goAnswer(sub.getFirstNumber(), sub.getSecondNumber());
+                OperationsNew sub = new OperationsNew(X,Y);
+                answer = sub.goAnswerSub(sub.getFirstNumber(), sub.getSecondNumber());
                 break;
             case '*':
-                MultiOpertaion multi = new MultiOpertaion(X,Y);
-                answer = multi.goAnswer(multi.getFirstNumber(), multi.getSecondNumber());
+                OperationsNew multi = new OperationsNew(X,Y);
+                answer = multi.goAnswerMul(multi.getFirstNumber(), multi.getSecondNumber());
                 break;
             case '/':
-                 DivOperation div = new DivOperation(X,Y);
-                 answer = div.goAnswer(div.getFirstNumber(), div.getSecondNumber());
-                 break;
+                OperationsNew div = new OperationsNew(X,Y);
+                answer = div.goAnswerDiv(div.getFirstNumber(), div.getSecondNumber());
+                break;
 
             default:
                 break;
