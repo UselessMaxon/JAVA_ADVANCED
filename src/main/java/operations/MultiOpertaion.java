@@ -1,4 +1,4 @@
-package Calc_OOP.operations;
+package operations;
 
 public class MultiOpertaion extends Operation {
 

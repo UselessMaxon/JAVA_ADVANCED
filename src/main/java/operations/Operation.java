@@ -1,4 +1,4 @@
-package Calc_OOP.operations;
+package operations;
 
 public abstract class Operation {
 
@@ -34,6 +34,4 @@ public abstract class Operation {
     }
 
 }
-
-
 
