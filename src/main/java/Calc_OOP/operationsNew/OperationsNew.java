@@ -30,7 +30,7 @@ public class OperationsNew {
     }
 
     public double goAnswerSum(double firstNumber, double secondNumber) {
-        answer = firstNumber - secondNumber;
+        answer = firstNumber + secondNumber;
         return answer;
     }
 
