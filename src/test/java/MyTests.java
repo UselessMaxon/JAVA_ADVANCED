@@ -8,14 +8,6 @@ import org.junit.Test;
 
 public class MyTests {
 
-
-    @Test
-    public void test1() {
-        OperationsNew sub = new OperationsNew();
-        Assert.assertEquals(0, sub.goAnswerSub(sub.getFirstNumber(), sub.getSecondNumber()), 0);
-
-    }
-
     @Test
     public void operationSum() {
         OperationsNew sum = new OperationsNew(55.5555, 33.3211);
