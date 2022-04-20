@@ -44,7 +44,15 @@ public class OperationsNew {
         return answer;
     }
 
-    public double goAnswerDiv(double firstNumber, double secondNumber) {
+    public double goAnswerDiv(double firstNumber, double secondNumber) throws IllegalArgumentException{
+
+            try {
+                if (secondNumber == 0) {
+                    throw new IllegalArgumentException();
+                }
+            } catch (IllegalArgumentException en) {
+                System.err.println("Произошло деление на ноль: " + en);
+            }
         answer = firstNumber / secondNumber;
         return answer;
     }

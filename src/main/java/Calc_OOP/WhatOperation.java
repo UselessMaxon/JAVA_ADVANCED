@@ -4,7 +4,8 @@ import Calc_OOP.operationsNew.OperationsNew;
 public class WhatOperation {
 
     double answer;
-    public double whatOperation(char operation, double X, double Y) {
+
+    public double whatOperation(char operation, double X, double Y) throws IllegalArgumentException{
 
         switch (operation) {
             case '+':
@@ -25,7 +26,8 @@ public class WhatOperation {
                 break;
 
             default:
-                break;
+                System.err.println("Введена неверная операция");
+                throw new IllegalArgumentException();
         }
 
         return answer;
