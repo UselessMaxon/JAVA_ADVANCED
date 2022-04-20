@@ -12,6 +12,9 @@ public class OperationsNew {
         this.secondNumber = secondNumber;
     }
 
+    public OperationsNew() {
+    }
+
 
     public double getFirstNumber() {
         return firstNumber;
@@ -45,7 +48,6 @@ public class OperationsNew {
     }
 
     public double goAnswerDiv(double firstNumber, double secondNumber) throws IllegalArgumentException{
-
             try {
                 if (secondNumber == 0) {
                     throw new IllegalArgumentException();
