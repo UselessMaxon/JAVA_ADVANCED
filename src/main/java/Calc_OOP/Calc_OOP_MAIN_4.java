@@ -43,8 +43,18 @@ public class Calc_OOP_MAIN_4 {
 
         operation = tempIn.charAt(0);
 
+        double answer;
         WhatOperation ready = new WhatOperation();
-        double answer= ready.whatOperation(operation, X, Y);
+
+        try {
+            answer = ready.whatOperation(operation, X, Y);
+        } catch (IllegalArgumentException n) {
+            System.err.println("Произошло деление на ноль! : " + n);
+            return;
+        } catch (ArithmeticException ar) {
+            System.err.println("Введена неверная операция! : " + ar);
+            return;
+        }
 
         System.out.print("Ответ: ");
         System.out.printf("%.4f", answer);

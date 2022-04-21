@@ -17,7 +17,7 @@ public class MyTests {
     @Test
     public void operationSumInputNegativeNumber() {
         OperationsNew sum = new OperationsNew(-55.5555, -33.3211);
-        Assert.assertEquals(-55.5555 + -33.3211, sum.goAnswerSum(sum.getFirstNumber(), sum.getSecondNumber()), 0);
+        Assert.assertEquals(-55.5555 + (-33.3211), sum.goAnswerSum(sum.getFirstNumber(), sum.getSecondNumber()), 0);
     }
 
     @Test
@@ -48,12 +48,6 @@ public class MyTests {
     public void operationDiv() {
         OperationsNew div = new OperationsNew(55.5555, 33.3211);
         Assert.assertEquals(55.5555 / 33.3211, div.goAnswerDiv(div.getFirstNumber(), div.getSecondNumber()), 0);
-    }
-
-    @Test
-    public void operationDivOnZero() {
-        OperationsNew div = new OperationsNew(55.5555, 0);
-        Assert.assertEquals(55.5555 / 0, div.goAnswerDiv(div.getFirstNumber(), div.getSecondNumber()), 0);
     }
 
     @Test
@@ -92,10 +86,15 @@ public class MyTests {
         Assert.assertEquals(43.9999/56.4444, ready.whatOperation('/', 43.9999,56.4444), 0);
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test(expected = ArithmeticException.class)
     public void checkExceptionWhatOperation() {
         WhatOperation ready = new WhatOperation();
         ready.whatOperation('%', 43.9999,56.4444);
     }
 
+    @Test (expected = IllegalArgumentException.class)
+    public void checkExceptionOperationDivOnZero() {
+        WhatOperation ready = new WhatOperation();
+        ready.whatOperation('/', 43.9999,0);
+    }
 }

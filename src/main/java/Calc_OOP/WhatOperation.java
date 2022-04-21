@@ -5,7 +5,7 @@ public class WhatOperation {
 
     double answer;
 
-    public double whatOperation(char operation, double X, double Y) throws IllegalArgumentException{
+    public double whatOperation(char operation, double X, double Y) throws ArithmeticException{
 
         switch (operation) {
             case '+':
@@ -26,12 +26,9 @@ public class WhatOperation {
                 break;
 
             default:
-                System.err.println("Введена неверная операция");
-                throw new IllegalArgumentException();
+                throw new ArithmeticException();
         }
 
         return answer;
     }
-
-
 }
